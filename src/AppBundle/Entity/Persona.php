@@ -27,13 +27,6 @@ class Persona extends BaseUser
     */
     protected $trayectos;
 
-
-    public function __construct()
-    {
-        parent::__construct();
-        // your own logic
-    }
-
     /**
      * Set avatar
      *
@@ -89,4 +82,20 @@ class Persona extends BaseUser
     {
         return $this->trayectos;
     }
+    
+    public function __construct() 
+    {
+        parent::__construct();
+        
+        $avatars = array(
+            "https://addons.cdn.mozilla.net/user-media/userpics/0/0/45.png?modified=1447324257",
+            "http://megaforo.com/images/user4.png",
+            "http://gh.nsrrc.org.tw/Content/img/male05.png"
+        );
+        
+        $indexSel = rand(0, count($avatars) - 1);
+    $this->avatar = $avatars[$indexSel];
+    }
+    
+
 }
