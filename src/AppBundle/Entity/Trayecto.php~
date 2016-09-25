@@ -275,11 +275,10 @@ use ORMBehaviors\Timestampable\Timestampable;
         return $this->conductor;
     }
     public function __construct()
-    {
-        $this->enabled = true;
-        $this->fechaDeViaje = new \DateTime();
-        $this->horaDeViaje = new \DateTime();
-    }
+{
+   $this->fechaDeViaje = new \DateTime();
+   $this->horaDeViaje = new \DateTime();
+}
 
 
     /**
